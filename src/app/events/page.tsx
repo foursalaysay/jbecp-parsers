@@ -50,7 +50,6 @@ export default function EventPage() {
                               RSVP
                            </Link>
                         </Button>
-                       
                       </div>
                     ))}
                   
