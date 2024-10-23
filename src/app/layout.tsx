@@ -1,7 +1,11 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/parts/Header";
+import Navigation from "@/components/parts/Navigation";
+
+
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,14 +28,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
-        
-          {children}
+         <div className='w-screen h-auto items-center justify-center pb-5' 
+            style={{
+              background: "black",
+              backgroundImage: `
+                radial-gradient(circle at top right, rgba(255, 0, 0, 0.5), transparent 45%)
+              `,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}>
+            <Navigation />
+            {children}
+          
+        </div>
       </body>
     </html>
   );

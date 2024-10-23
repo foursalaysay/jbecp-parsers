@@ -1,66 +1,25 @@
 'use client'
 
 import React from 'react';
+import { Membership } from '@/components/parts/Membership';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-
-
-
+import SocialMedia from '@/components/parts/SocialMedia';
 
 const Home = () => {
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Function to handle scroll event
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  // Effect to add/remove scroll event listener
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-
-
   return (
-    <div className='w-full h-full flex flex-col items-center justify-center'>
-        <Image
-          src="/website.png"
-          className={`w-full h-full ${isScrolled ? 'blur-md' : ''}`}
-          height={400}
-          width={800}
-          alt="jbecp-cover-photo"
-        />
-    <Dialog>
-    <DialogTrigger >Become A Member</DialogTrigger>
-    <DialogContent>
-      <DialogHeader>
-        <DialogTitle>Are you absolutely sure?</DialogTitle>
-        <DialogDescription>
-          This action cannot be undone. This will permanently delete your account
-          and remove your data from our servers.
-        </DialogDescription>
-      </DialogHeader>
-    </DialogContent>
-  </Dialog>
-
-    </div>
+        <div className='flex flex-col gap-8 items-center justify-start mt-8'>
+            <Image
+            className='rounded-full w-56 h-56 lg:w-72 lg:h-72'
+            src='/parser-logo.png'
+            height={500}
+            width={500}
+            alt='logo'
+            />
+            <Membership />
+            <SocialMedia />
+            <p className="text-sm font-bold text-white text-center mt-5">All Rights Reserved. 2024</p>
+        </div>
   );
 };
 
