@@ -4,9 +4,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "@/components/parts/Navigation";
 
-
-
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -34,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         <div className='w-screen h-auto items-center justify-center pb-5' 
+         <div className='w-screen h-screen items-center justify-center' 
             style={{
               background: "black",
               backgroundImage: `
@@ -45,7 +42,7 @@ export default function RootLayout({
             }}>
             <Navigation />
             {children}
-          
+            <p className="text-sm font-bold text-white text-center mt-32">All Rights Reserved. 2024</p>
         </div>
       </body>
     </html>

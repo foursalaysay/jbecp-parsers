@@ -34,7 +34,6 @@ const events = [
   }
 ];
 
-
 export default function EventPage() {
   return (
         <div className='flex flex-col items-center justify-center px-5'>
