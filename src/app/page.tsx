@@ -18,7 +18,7 @@ const Home = () => {
             />
             <Membership />
             <SocialMedia />
-           
+            <p className="text-sm font-bold text-white text-center">All Rights Reserved. 2024</p>
         </div>
   );
 };

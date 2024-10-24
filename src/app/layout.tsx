@@ -31,8 +31,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         <div className='w-screen h-screen items-center justify-center' 
-            style={{
+         <div className="w-screen h-screen items-center justify-center"
+          style={{
               background: "black",
               backgroundImage: `
                 radial-gradient(circle at top right, rgba(255, 0, 0, 0.5), transparent 45%)
@@ -42,7 +42,7 @@ export default function RootLayout({
             }}>
             <Navigation />
             {children}
-            <p className="text-sm font-bold text-white text-center mt-32">All Rights Reserved. 2024</p>
+          
         </div>
       </body>
     </html>

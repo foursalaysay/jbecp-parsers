@@ -11,7 +11,7 @@ export function MobileNavDropdown() {
 
   return (
     <header className="bg-transparent">
-      <nav className="container mx-auto px-8 py-3">
+      <nav className="container px-8 py-3">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <span className="text-2xl font-semibold text-red-500">Par<span className="text-white">sers</span></span>
