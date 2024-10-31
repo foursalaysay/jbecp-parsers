@@ -2,9 +2,7 @@ import React from 'react'
 
 export default function AboutPage() {
   return (
-    
-    
-     
+  
  <>
     <div className='w-full h-auto flex flex-col items-center justify-center gap-5'
     style={{
